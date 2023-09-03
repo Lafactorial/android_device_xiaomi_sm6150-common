@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2018 The LineageOS Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Generic texts -->
+    <string name="disabled">Desativado</string>
+
+    <!-- XiaomiParts -->
+    <string name="xiaomiparts_title">XiaomiParts</string>
+    <string name="xiaomiparts_summary">Configurações avançadas</string>
+    <string name="audio_title">Áudio</string>
+    <string name="display_title">Tela</string>
+    <string name="performance_title">Desempenho</string>
+    <string name="vibration_title">Vibração</string>
+
+    <!-- Dirac settings -->
+    <string name="dirac_title">Dirac</string>
+    <string name="dirac_enable">Ativar o otimizador de áudio</string>
+    <string name="dirac_summary">Otimize a qualidade do áudio</string>
+    <string name="dirac_headset_title">Escolher tipo de fone de ouvido</string>
+    <string name="dirac_preset_title">Escolha uma predefinição</string>
+
+    <!-- Dirac settings: Headset types -->
+    <string name="dirac_headset_default">Padrão</string>
+    <string name="dirac_headset_earbuds">Mi Earbuds</string>
+    <string name="dirac_headset_in_ear_2013">Mi In-Ear (2013)</string>
+    <string name="dirac_headset_piston_1">Mi Piston 1</string>
+    <string name="dirac_headset_general">Genérico</string>
+    <string name="dirac_headset_general_inear">In-Ear genérico</string>
+    <string name="dirac_headset_piston_basic">Basic Edition</string>
+    <string name="dirac_headset_piston_2">Mi Piston 2</string>
+    <string name="dirac_headset_piston_standard">Standard Edition</string>
+    <string name="dirac_headset_headphone">Mi Headphones</string>
+    <string name="dirac_headset_piston_youth">Youth Edition</string>
+    <string name="dirac_headset_piston_color">Color Edition</string>
+    <string name="dirac_headset_in_ear">Mi In-Ear</string>
+    <string name="dirac_headset_capsule">Mi Capsule</string>
+    <string name="dirac_headset_in_ear_pro">Mi In-Ear Pro</string>
+    <string name="dirac_headset_comfort">Mi Comfort</string>
+    <string name="dirac_headset_reduction_noise">Mi Noise Cancelling Type-C</string>
+    <string name="dirac_headset_cancelling">Mi Noise Cancelling 3.5mm</string>
+    <string name="dirac_headset_half_in_ear">Mi Half In-Ear</string>
+    <string name="dirac_headset_in_ear2">Mi In-Ear 2</string>
+    <string name="dirac_headset_earphone_basic">Mi Earphones Basic</string>
+    <string name="dirac_headset_earphone">Mi Earphones</string>
+    <string name="dirac_headset_ear_four">Mi Quadruple Driver Earphones</string>
+    <string name="dirac_headset_piston_typec">Mi In-Ear Headphones (Tipo-C)</string>
+    <string name="dirac_headset_bluetooth_collar">Mi Bluetooth Neckband</string>
+    <string name="dirac_headset_bluetooth_linefree">Mi Bluetooth Earphones</string>
+    <string name="dirac_headset_redmi_earphones">Redmi Earphones</string>
+    <string name="dirac_headset_dual_driver_in_ear">Mi Dual Driver In-ear Earphones</string>
+
+    <!-- Dirac settings: Equalizer presets -->
+    <string name="dirac_preset_default">Padrão</string>
+    <string name="dirac_preset_rock">Rock</string>
+    <string name="dirac_preset_jazz">Jazz</string>
+    <string name="dirac_preset_pop">Pop</string>
+    <string name="dirac_preset_classical">Clássica</string>
+    <string name="dirac_preset_hiphop">Hip Hop</string>
+    <string name="dirac_preset_blues">Blues</string>
+    <string name="dirac_preset_electronic">Eletrônica</string>
+    <string name="dirac_preset_country">Country</string>
+    <string name="dirac_preset_dance">Dance</string>
+    <string name="dirac_preset_metal">Metal</string>
+    <string name="dirac_preset_bass_booster">Reforçar graves</string>
+    <string name="dirac_preset_live">Ao Vivo</string>
+    <string name="dirac_preset_balanced">Balanceado</string>
+    <string name="dirac_preset_bass_reduction">Reduzir graves</string>
+    <string name="dirac_preset_treble_reduction">Reduzir agudos</string>
+    <string name="dirac_preset_soft_bass">Graves (Suave)</string>
+    <string name="dirac_preset_soft_treble">Agudos (Suave)</string>
+
+    <!-- Dirac settings: Sound Scenes -->
+    <string name="music_headset_scenario_select">Selecionar cenário</string>
+    <string name="music_headset_scenario_intelligent">Inteligente</string>
+    <string name="music_headset_scenario_music">Música</string>
+    <string name="music_headset_scenario_video">Vídeo</string>
+    <string name="music_headset_scenario_vocal">Voz</string>
+
+    <!-- Thermal Profiles -->
+    <string name="thermal_title">Perfis térmicos</string>
+    <string name="thermal_summary">Defina perfis térmicos e modo de jogo para cada aplicativo</string>
+    <string name="thermal_default">Padrão</string>
+    <string name="thermal_performance">Desempenho</string>
+    <string name="thermal_camera">Câmera</string>
+    <string name="thermal_dialer">Discador</string>
+
+    <!-- Clear Speaker -->
+    <string name="clear_speaker_title">Limpar alto-falante</string>
+    <string name="clear_speaker_enable">Usar Limpar alto-falante</string>
+    <string name="clear_speaker_summary">Tocar um som de 30 segundos para limpar o alto-falante</string>
+    <string name="clear_speaker_description">Execute esse recurso uma ou duas vezes se o alto-falante estiver bloqueado por sujeira ou água. Você deve ajustar o volume de mídia para o máximo.\n\nSe o alto-falante estiver muito bloqueado, execute este recurso 2 a 5 vezes enquanto agita seu dispositivo com o alto-falante voltado para baixo.\n\nAVISO: Certifique-se de que todos os fones de ouvido estejam desconectados.</string>
+
+    <!-- Kcal settings -->
+    <string name="kcal_settings_title">KCAL</string>
+    <string name="kcal_settings_summary">Ajuste as cores da sua tela usando KCAL</string>
+    <string name="kcal_enable">Usar KCAL</string>
+    <string name="kcal_not_supported">O kernel não tem suporte ao KCAL</string>
+    <string name="red_slider_title">Vermelho</string>
+    <string name="green_slider_title">Verde</string>
+    <string name="blue_slider_title">Azul</string>
+    <string name="hue_slider_title">Matiz</string>
+    <string name="brightness_slider_title">Brilho</string>
+    <string name="kcal_rgb_preference_category_title">RGB</string>
+    <string name="kcal_calibration_preference_category_title">Calibração de cores</string>
+    <string name="saturation_slider_title">Saturação</string>
+    <string name="reset_default_button_title">Redefinir para configuração padrão</string>
+    <string name="reset_default_button_summary">Redefinir todas as configurações do KCAL</string>
+    <string name="contrast_slider_title">Contraste</string>
+    <string name="reset_category_title">Redefinir</string>
+
+    <!-- LCD Features -->
+    <string name="lcd_features_title">Recursos do LCD</string>
+    <string name="lcd_features_summary">Modo de alto brilho, CABC</string>
+    <string name="lcd_hbm_title">Modo de alto brilho (HBM)</string>
+    <string name="lcd_hbm_tile_title">HBM</string>
+    <string name="lcd_hbm_medium">Médio</string>
+    <string name="lcd_hbm_high">Alto</string>
+    <string name="lcd_cabc_title">Modo CABC</string>
+    <string name="lcd_cabc_low">Baixo (Interface do sistema)</string>
+    <string name="lcd_cabc_medium">Médio (Vídeos)</string>
+    <string name="lcd_cabc_high">Alto (Imagens)</string>
+    <string name="lcd_features_info">O Modo de alto brilho (HBM) aumenta o brilho máximo da tela para melhorar a visibilidade sob a luz do sol. Aumenta o consumo de energia.\n\nCABC (Content Adaptive Backlight Control) ajusta o brilho da tela e da luz de fundo com base no conteúdo exibido no momento, para reduzir o consumo de energia sem degradação.</string>
+
+    <!-- Touch Control Settings -->
+    <string name="touch_game_mode_title">Ativar modo de jogo</string>
+    <string name="touch_game_mode_summary">Otimiza a resposta ao toque e aumenta o desempenho do dispositivo</string>
+    <string name="touch_response_title">Resposta ao toque</string>
+    <string name="touch_response_summary">Controle a resposta ao toque</string>
+    <string name="touch_sensitivity_title">Sensibilidade do toque</string>
+    <string name="touch_sensitivity_summary">Controle a sensibilidade para toques repetidos</string>
+    <string name="touch_resistant_title">Área resistente a toques</string>
+    <string name="touch_resistant_summary">Controle a sensibilidade perto das bordas para evitar toques acidentais</string>
+
+    <!-- Refresh Rate  -->
+    <string name="refresh_title">Taxa de atualização por aplicativo</string>
+    <string name="refresh_summary">Defina uma taxa de atualização específica para cada aplicativo</string>
+    <string name="refresh_default">Padrão</string>
+    <string name="refresh_rate_tile_title">Taxa de atualização</string>
+
+    <!-- Haptic Level Settings -->
+    <string name="haptic_level_title">Intensidade da vibração</string>
+    <string name="haptic_level_summary_incompatible">O kernel não suporta este recurso</string>
+
+    <!-- FPS Counter -->
+    <string name="fps_info_title">Contador de FPS</string>
+</resources>
