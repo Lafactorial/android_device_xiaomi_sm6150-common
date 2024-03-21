@@ -63,7 +63,7 @@ function lib_to_package_fixup() {
 setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true
 
 # Warning headers and guards
-write_headers "courbet davinci phoenix surya sweet toco violet"
+write_headers "courbet davinci phoenix surya sweet sweet2 toco violet"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt"
