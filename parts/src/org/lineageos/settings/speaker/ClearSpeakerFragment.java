@@ -26,16 +26,15 @@ import android.os.Looper;
 import android.util.Log;
 
 import androidx.preference.PreferenceFragment;
-import android.widget.Switch;
+import android.widget.CompoundButton;
 
 import com.android.settingslib.widget.MainSwitchPreference;
-import com.android.settingslib.widget.OnMainSwitchChangeListener;
 
 import org.lineageos.settings.R;
 
 import java.io.IOException;
 
-public class ClearSpeakerFragment extends PreferenceFragment implements OnMainSwitchChangeListener {
+public class ClearSpeakerFragment extends PreferenceFragment implements CompoundButton.OnCheckedChangeListener {
 
     private static final String TAG = "ClearSpeakerFragment";
     private static final String PREF_CLEAR_SPEAKER = "clear_speaker_pref";
@@ -54,7 +53,7 @@ public class ClearSpeakerFragment extends PreferenceFragment implements OnMainSw
     }
 
     @Override
-    public void onSwitchChanged(Switch switchView, boolean isChecked) {
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         mClearSpeakerPref.setChecked(isChecked);
 
         if (isChecked && startPlaying()) {
