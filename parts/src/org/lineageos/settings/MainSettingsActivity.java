@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
-import com.android.settingslib.widget.R;
 
 public class MainSettingsActivity extends CollapsingToolbarBaseActivity {
 
@@ -12,7 +11,7 @@ public class MainSettingsActivity extends CollapsingToolbarBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getFragmentManager().beginTransaction()
-                .replace(R.id.content_frame, new MainSettingsFragment())
+                .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame, new MainSettingsFragment())
                 .commit();
     }
 
