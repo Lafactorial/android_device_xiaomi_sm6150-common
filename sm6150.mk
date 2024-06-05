@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+-include vendor/lineage-priv/keys/keys.mk
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 
 # Setup dalvik vm configs
