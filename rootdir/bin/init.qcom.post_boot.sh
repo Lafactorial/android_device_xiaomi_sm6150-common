@@ -78,12 +78,6 @@ function configure_memory_parameters() {
     echo 1 > /sys/module/lowmemorykiller/parameters/oom_reaper
 }
 
-# Apply settings for sm6150
-# Set the default IRQ affinity to the silver cluster. When a
-# CPU is isolated/hotplugged, the IRQ affinity is adjusted
-# to one of the CPU from the default IRQ affinity mask.
-echo 3f > /proc/irq/default_smp_affinity
-
 if [ -f /sys/devices/soc0/soc_id ]; then
     soc_id=`cat /sys/devices/soc0/soc_id`
 else
@@ -92,30 +86,6 @@ fi
 
 case "$soc_id" in
         "355" | "369" | "377" | "380" | "384" )
-
-    # Setting b.L scheduler parameters
-    echo 25 > /proc/sys/kernel/sched_downmigrate_boosted
-    echo 25 > /proc/sys/kernel/sched_upmigrate_boosted
-    echo 85 > /proc/sys/kernel/sched_downmigrate
-    echo 95 > /proc/sys/kernel/sched_upmigrate
-
-    # configure governor settings for little cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-    echo 500 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
-    echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
-
-    # configure governor settings for big cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
-    echo 500 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us
-    echo 20000 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us
-
-    # Configure default schedTune value for foreground/top-app
-    echo 1 > /dev/stune/foreground/schedtune.prefer_idle
-    echo 10 > /dev/stune/top-app/schedtune.boost
-    echo 1 > /dev/stune/top-app/schedtune.prefer_idle
-
-    # Set Memory parameters
-    configure_memory_parameters
 
     # Enable bus-dcvs
     for device in /sys/devices/platform/soc
@@ -174,49 +144,11 @@ case "$soc_id" in
             echo 10 > $latfloor/polling_interval
         done
     done
-
-    # cpuset parameters
-    echo 0-7     > /dev/cpuset/top-app/cpus
-    echo 0-5,7 > /dev/cpuset/foreground/cpus
-    echo 4-5     > /dev/cpuset/background/cpus
-    echo 2-5     > /dev/cpuset/system-background/cpus
-    echo 2-5     > /dev/cpuset/restricted/cpus
-
-    # Enable idle state listener
-    echo 1 > /sys/class/drm/card0/device/idle_encoder_mask
-    echo 100 > /sys/class/drm/card0/device/idle_timeout_ms
-
-    # Turn on sleep modes.
-    echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
     ;;
 esac
 
 case "$soc_id" in
     "365" | "366" )
-
-    # Setting b.L scheduler parameters
-    echo 25 > /proc/sys/kernel/sched_downmigrate_boosted
-    echo 25 > /proc/sys/kernel/sched_upmigrate_boosted
-    echo 85 > /proc/sys/kernel/sched_downmigrate
-    echo 95 > /proc/sys/kernel/sched_upmigrate
-
-    # configure governor settings for little cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-    echo 500 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us
-    echo 20000 > /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us
-
-    # configure governor settings for big cluster
-    echo "schedutil" > /sys/devices/system/cpu/cpu6/cpufreq/scaling_governor
-    echo 500 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/up_rate_limit_us
-    echo 20000 > /sys/devices/system/cpu/cpu6/cpufreq/schedutil/down_rate_limit_us
-
-    # Configure default schedTune value for foreground/top-app
-    echo 1 > /dev/stune/foreground/schedtune.prefer_idle
-    echo 10 > /dev/stune/top-app/schedtune.boost
-    echo 1 > /dev/stune/top-app/schedtune.prefer_idle
-
-    # Set Memory parameters
-    configure_memory_parameters
 
     # Enable bus-dcvs
     for device in /sys/devices/platform/soc
@@ -292,24 +224,8 @@ case "$soc_id" in
             echo 10 > $latfloor/polling_interval
         done
     done
-
-    # cpuset parameters
-    echo 0-7     > /dev/cpuset/top-app/cpus
-    echo 0-5,7 > /dev/cpuset/foreground/cpus
-    echo 4-5     > /dev/cpuset/background/cpus
-    echo 2-5     > /dev/cpuset/system-background/cpus
-    echo 2-5     > /dev/cpuset/restricted/cpus
-
-    # Enable idle state listener
-    echo 1 > /sys/class/drm/card0/device/idle_encoder_mask
-    echo 100 > /sys/class/drm/card0/device/idle_timeout_ms
-
-    # Turn on sleep modes.
-    echo 0 > /sys/module/lpm_levels/parameters/sleep_disabled
     ;;
 esac
 
-# Enable PowerHAL hint processing
-setprop vendor.powerhal.init 1
-
-setprop vendor.post_boot.parsed 1
+    # Set Memory parameters
+    configure_memory_parameters
