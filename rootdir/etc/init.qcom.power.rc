@@ -148,7 +148,7 @@ on property:vendor.setup.power=1
     # Set default schedTune value for foreground, top-app & camera-daemon
     write /dev/stune/foreground/schedtune.boost 0
     write /dev/stune/foreground/schedtune.prefer_idle 1
-    write /dev/stune/top-app/schedtune.boost 10
+    write /dev/stune/top-app/schedtune.boost 20
     write /dev/stune/top-app/schedtune.prefer_idle 1
     write /dev/stune/camera-daemon/schedtune.boost 0
     write /dev/stune/camera-daemon/schedtune.prefer_idle 1
