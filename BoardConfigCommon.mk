@@ -97,6 +97,7 @@ BOARD_KERNEL_CMDLINE := \
     earlycon=msm_geni_serial,0x880000 \
     androidboot.hardware=qcom \
     androidboot.console=ttyMSM0 \
+    androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
     service_locator.enable=1 \
     lpm_levels.sleep_disabled=1 \
