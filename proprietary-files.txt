@@ -21,6 +21,7 @@ vendor/lib64/libcdsprpc.so
 vendor/lib64/libcdsprpc_system.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
+vendor/lib64/libcdsprpc_system.so
 
 # Alarm
 product/app/PowerOffAlarm/PowerOffAlarm.apk
