@@ -6,4 +6,3 @@ cc_library_static {
         "libotautil",
     ],
 }
-
