@@ -26,7 +26,6 @@ import android.util.Log;
 
 import androidx.preference.PreferenceManager;
 
-import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.display.KcalUtils;
 import org.lineageos.settings.utils.HapticUtils;
 import org.lineageos.settings.refreshrate.RefreshUtils;
@@ -47,9 +46,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         if (DEBUG)
             Log.d(TAG, "Received boot completed intent");
-
-        // Dirac
-        DiracUtils.onBootCompleted(context);
 
         // KCAL
         if (KcalUtils.isKcalSupported())
