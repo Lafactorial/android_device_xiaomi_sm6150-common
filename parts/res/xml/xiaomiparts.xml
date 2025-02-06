@@ -8,17 +8,6 @@
         android:title="@string/audio_title">
 
         <Preference
-            android:key="dirac_settings"
-            android:icon="@drawable/ic_dirac"
-            android:title="@string/dirac_title"
-            android:summary="@string/dirac_summary">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetClass="org.lineageos.settings.dirac.DiracActivity"
-                android:targetPackage="org.lineageos.settings.dirac" />
-        </Preference>
-
-        <Preference
             android:key="clear_speaker_settings"
             android:icon="@drawable/ic_clear_speaker"
             android:title="@string/clear_speaker_title"
