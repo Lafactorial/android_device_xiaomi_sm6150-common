@@ -355,7 +355,7 @@ function configure_zram_parameters() {
 configure_zram_parameters
 echo 0 > /proc/sys/vm/page-cluster
 echo 0 > /sys/module/vmpressure/parameters/allocstall_threshold
-echo 100 > /proc/sys/vm/swappiness
+echo 60 > /proc/sys/vm/swappiness
 
 # Enable PowerHAL hint processing
 setprop vendor.powerhal.init 1
