@@ -82,6 +82,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 
 # Kernel Path
 TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6150
+TARGET_KERNEL_CONFIG := vendor/sdmsteppe-perf_defconfig vendor/debugfs.config
 
 # Kernel Cmdline
 BOARD_KERNEL_CMDLINE := \
